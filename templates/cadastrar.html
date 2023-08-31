@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css"
+     href="{{ url_for('static', filename='cadastrar.css') }}">
+
+    <title>Cadastrar Notícia</title>
+</head>
+<style>
+    *{
+margin: 0;
+padding: 0;
+}
+
+
+.sessao__noticias{
+background: linear-gradient(#e13737, #30324b);
+height: 20vh;
+padding: 2vw;
+}
+
+h1{
+font-size: 3vw;
+color: white;
+text-shadow: 4px 3px 6px black;
+}
+.noticias-link{
+margin-top: 3vh;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+
+.{
+color: white;
+font-size: 1.2vw;
+text-decoration: none;
+border: 1px solid black;
+width: 20vw;
+height: 5vh;
+border-radius: 1vh;
+
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #b12020;
+border: none;
+box-shadow: 5px 5px 10px rgb(3, 3, 3);
+}
+
+a:hover{
+color: aqua;
+}
+
+
+<body>
+    <header>
+        <a href="/">Voltar</a>
+    </header>
+    <section class="sessao__cadastrar">
+        <h1>Cadastrar Notícia</h1>
+        <form action="/cadastrar" method="post">
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" name="titulo">
+
+            <label for="conteudo">Conteúdo:</label>
+            <textarea id="conteudo" name="conteudo" rows="4" cols="50"></textarea>
+            <input id="botao-cadastrar" type="submit" value="Cadastrar">
+
+            
+        </form>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" 
+    href="{{ url_for('static', filename='mini.css') }}">
+    <title>Notícias Cadastradas</title>
+</head>  
+<body>
+    <h1>Notícias Cadastradas</h1>
+    <a href="/">Voltar</a>
+    {% if noticias %}
+        {% for noticia in noticias %}
+            <div class="noticia">
+                <div class="titulo">{{ noticia.titulo }}</div>
+                <div class="conteudo">{{ noticia.conteudo }}</div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>Nenhuma notícia cadastrada.</p>
+    {% endif %}
+</body>
+</html>
